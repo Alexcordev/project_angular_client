@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-body">
+    <form #employeForm = "ngForm" (ngSubmit)="onSubmit(employeForm)">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="employe.name" aria-describedby="nameHelp" placeholder="Nom de l'employé">
+
+      </div>
+      <div class="form-group">
+        <label for="surname">Prénom</label>
+        <input type="text" class="form-control" name="surname" #name="ngModel" [(ngModel)]="employe.surname" placeholder="Prénom">
+      </div>
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <input type="text" class="form-control" name="address" #name="ngModel" [(ngModel)]="employe.address" placeholder="Adresse">
+      </div>
+      <div class="form-group">
+        <label for="tel">Téléphone</label>
+        <input type="text" class="form-control" name="tel" #name="ngModel" [(ngModel)]="employe.tel" placeholder="Téléphone">
+      </div>
+      <div class="form-group">
+        <label for="email">Courriel</label>
+        <input type="text" class="form-control" name="email" #name="ngModel" [(ngModel)]="employe.email" placeholder="Courriel">
+      </div>
+      <div class="form-group">
+        <label for="poste">Poste</label>
+        <input type="text" class="form-control" name="title" #name="ngModel" [(ngModel)]="employe.title" placeholder="Poste">
+      </div>
+      <div class="form-group">
+        <label for="rate">Taux horaire</label>
+        <input type="text" class="form-control" name="rate" #name="ngModel" [(ngModel)]="employe.rate" placeholder="Taux horaire">
+      </div>
+      <div class="form-group">
+        <label for="hired">Date d'embauche</label>
+        <input type="text" class="form-control" name="hired" #name="ngModel" [(ngModel)]="employe.hired" placeholder="Date d'embauche">
+      </div>
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+
+  </div>
+</div>

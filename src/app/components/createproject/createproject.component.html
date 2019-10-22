@@ -1,0 +1,56 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{title}}</h1>
+    <p class="lead"></p>
+  </div>
+</div>
+<div class="alert alert-success" role="alert" *ngIf="status == true">
+  Le projet a été créé correctement.
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="status == false">
+  Erreur lors de l'enregistrement du projet.
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <form #projectForm = "ngForm" (ngSubmit)="onSubmit(projectForm)">
+      <div class="form-group">
+        <label for="name">Projet</label>
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="project.name" aria-describedby="nameHelp" placeholder="Nom du projet">
+        <small id="nameHelp" class="form-text text-muted">Nom du projet</small>
+      </div>
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <input type="text" class="form-control" name="address" #name="ngModel" [(ngModel)]="project.address" placeholder="Adresse">
+      </div>
+      <div class="form-group">
+        <label for="tel">Téléphone</label>
+        <input type="text" class="form-control" name="tel" #name="ngModel" [(ngModel)]="project.tel" placeholder="Téléphone">
+      </div>
+      <div class="form-group">
+        <label for="startDate">Date de début</label>
+        <input type="date" class="form-control" name="startDate" #name="ngModel" [(ngModel)]="project.startDate" placeholder="Début">
+      </div>
+      <div class="form-group">
+        <label for="endDate">Date de fin</label>
+        <input type="date" class="form-control" name="endDate" #name="ngModel" [(ngModel)]="project.endDate" placeholder="Fin">
+      </div>
+      <div class="form-group">
+        <label for="budget">Budget</label>
+        <input type="text" class="form-control" name="budget" #name="ngModel" [(ngModel)]="project.budget" placeholder="Budget">
+      </div>
+      <div class="form-group">
+        <label for="manager">Superviseur</label>
+        <input type="text" class="form-control" name="manager" #name="ngModel" [(ngModel)]="project.manager" placeholder="Nom du superviseur">
+      </div>
+      <div class="form-group">
+        <label for="employees">Nombre d'employés</label>
+        <input type="text" class="form-control" name="employees" #name="ngModel" [(ngModel)]="project.employees" placeholder="Employés">
+      </div>
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+
+  </div>
+</div>
